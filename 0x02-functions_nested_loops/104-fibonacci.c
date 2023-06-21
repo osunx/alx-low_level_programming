@@ -1,15 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - Entry into a C program
- *
- * printFibonacci - Prints the Fibonacci sequence up to the specified number of terms.
+ * printFibonacci - Prints the Fibonacci
+ * sequence up to the specified number of terms.
  *
  * @n: The number of Fibonacci terms to print.
- *
- * Return: number of digits
-*/
-
+ */
 void printFibonacci(int n)
 {
 unsigned int fib1 = 1, fib2 = 2, nextTerm;
@@ -28,6 +24,11 @@ fib2 = nextTerm;
 }
 }
 
+/**
+* main - Entry point of the program.
+*
+* Return: 0 on success.
+*/
 int main(void)
 {
 printFibonacci(98);
