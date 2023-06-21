@@ -9,24 +9,25 @@
  *
  * Return: Always 0 (Success)
 */
-
 int main(void)
 {
-int fib1 = 1, fib2 = 2, nextTerm;
-long long sum = 2;  /** Start with sum = 2 since the second term (2) is even */
+unsigned long fib1 = 0, fib2 = 1, sum;
+float total_sum;
 
-while (fib2 <= 4000000)
+while (1)
 {
-nextTerm = fib1 + fib2;
+sum = fib1 + fib2;
 
-if (nextTerm % 2 == 0)
-sum += nextTerm;
+if (sum > 4000000)
+break;
+
+if ((sum % 2) == 0)
+total_sum += sum;
 
 fib1 = fib2;
-fib2 = nextTerm;
+fib2 = sum;
 }
-
-printf("%lld\n", sum);
+printf("%.0f\n", total_sum);
 
 return (0);
 }
