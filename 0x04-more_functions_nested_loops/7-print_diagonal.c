@@ -19,7 +19,7 @@ for (postn = 1; postn <= n; ++postn)
 {
 for (space = 1; space <= postn; ++space)
 _putchar(' ');
-_putchar('/'); /*or 92 ASCII value of the backslash can be used char*/
+_putchar(92); /*or '/' ASCII value of the backslash can be used char*/
 _putchar('\n');
 }
 }
