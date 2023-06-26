@@ -10,18 +10,22 @@
 
 void puts_half(char *str)
 {
-int l;
-int n;
-for (l = 0; str[l] != '\0'; ++l)
-if (l % 2 == 0)
-{
-for (n = l / 2; str[n] != '\0'; ++n)
-_putchar(str[n]);
-}
+int length = 0;
+int i, start_index;
+
+/*Calculate the length of the string*/
+while (str[length] != '\0')
+length++;
+
+/*Calculate the start index for printing the second half*/
+if (length % 2 == 0)
+start_index = length / 2;
 else
-{
-for (n = ((l - 1) / 2) + 1; str[n] != '\0'; ++n)
-_putchar(str[n]);
-}
-_putchar('\n');
+start_index = (length + 1) / 2;
+
+/*Print the second half of the string*/
+for (i = start_index; i < length; i++)
+putchar(str[i]);
+
+putchar('\n');
 }
