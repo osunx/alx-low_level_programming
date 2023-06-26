@@ -10,15 +10,14 @@
 
 void print_rev(char *s)
 {
-if (s == NULL)
-return;
+int index;
 
-int length = 0;
-while (s[length] != '\0')
-length++;
+/*finds the length of string without null character*/
+for (index = 0; s[index] != '\0'; ++index)
+;
 
-for (int i = length - 1; i >= 0; i--)
-printf("%c", s[i]);
-
-printf("\n");
+/*print char from the last index as you decrement*/
+for (--index; index >= 0; --index)
+_putchar(s[index]);
+_putchar('\n');
 }
