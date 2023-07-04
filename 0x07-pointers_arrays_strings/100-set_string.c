@@ -13,15 +13,3 @@ void set_string(char **s, char *to)
 {
 *s = to;
 }
-
-int main(void)
-{
-char *s = "Hello";
-char *to = "World";
-
-printf("Before set_string: %s\n", s);
-set_string(&s, to);
-printf("After set_string: %s\n", s);
-
-return 0;
-}
