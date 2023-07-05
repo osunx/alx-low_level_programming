@@ -1,3 +1,4 @@
+#include <string.h>
 /**
 * is_palindrome_recursive - Check if a
 * string is a palindrome recursively.
