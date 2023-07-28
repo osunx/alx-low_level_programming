@@ -1,29 +1,20 @@
 #include "lists.h"
 
 /**
- * list_len - gets the number of nodes
+ * list_len - Returns the number of elements in a linked list_t list.
+ * @h: Pointer to the head of the list.
  *
- * @h: pointer to the head (first node)
- *
- * Return: number of nodes
-*/
-
+ * Return: The number of elements in the list.
+ */
 size_t list_len(const list_t *h)
 {
-	size_t value = 1;
+size_t count = 0;
 
-	/*if head is null return 0 nodes*/
-	if (h == NULL)
-		return (0);
+while (h != NULL)
+{
+count++;
+h = h->next;
+}
 
-	/*loop through the nodes h points to*/
-	while (h != NULL)
-	{
-		/*go to the next node in the list*/
-		h = h->next;
-		/*count the number of node*/
-		value++;
-	}
-
-	return (value);
+return count;
 }
