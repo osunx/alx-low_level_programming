@@ -10,7 +10,7 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t node_count = 1;
+	size_t numofnode = 1;
 
 	/*return 0 as number of nodes*/
 	if (h == NULL)
@@ -27,11 +27,11 @@ size_t print_list(const list_t *h)
 		/*go to the next node*/
 		h = h->next;
 		/*count number of nodes*/
-		node_count += 1;
+		numofnode += 1;
 	}
 
 	/*print for the last node*/
 	printf("[%d] %s\n", h->len, h->str);
 
-	return (node_count);
+	return (numofnode);
 }

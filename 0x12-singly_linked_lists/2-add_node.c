@@ -16,7 +16,7 @@ list_t *add_node(list_t **head, const char *str)
 	size_t strlen = 0;
 
 	/*set string length to 0 if its NULL*/
-	if (str == NULL)
+	if (str->next == NULL)
 		strlen = 0;
 
 	/*check if srt isn't = null terminator*/
@@ -35,7 +35,7 @@ list_t *add_node(list_t **head, const char *str)
 	 * ->next which add new_value at the beginning
 	 *  of the list
 	*/
-	if (*head == NULL)
+	if (*head->next == NULL)
 		new_value->next = NULL;
 	else
 		new_value->next = *head;
