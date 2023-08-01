@@ -18,10 +18,15 @@ return NULL;
 
 /* Initialize the new node */
 new_node->n = n;
+
+/*link first node in head with the new_node*/
+if (*head == NULL)
+new_node->next = NULL;
+else
 new_node->next = *head;
 
 /* Update the head to point to the new node */
 *head = new_node;
 
-return new_node;
+return (new_node);
 }
