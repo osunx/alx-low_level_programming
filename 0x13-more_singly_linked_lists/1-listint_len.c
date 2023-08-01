@@ -8,7 +8,7 @@
  */
 size_t listint_len(const listint_t *h);
 {
-size_t node_count = 0;
+size_t node_count = 1;
 
 /*return 0 as no of elements when h is NULL*/
 if (h == NULL)
