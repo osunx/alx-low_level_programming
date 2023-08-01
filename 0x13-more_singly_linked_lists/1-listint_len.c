@@ -12,8 +12,11 @@ size_t node_count = 0;
 
 while (h != NULL)
 {
-h = h->next;
+/*check if the node is present*/
+if (h->n != '\0')
 node_count++;
+/*Move to the next*/
+h = h->next;
 }
 
 return (node_count);
