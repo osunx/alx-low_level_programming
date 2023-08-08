@@ -1,4 +1,4 @@
-#include "main.h"y
+#include "main.h"
 
 /**
 * error_exit - Display an error message and exit with status code 98.
