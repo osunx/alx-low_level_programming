@@ -1,25 +1,36 @@
 #include "main.h"
 
 /**
- * print_number - Prints any integer with putchar
- * @n: Number to prints
- *
+ * print_number - Prints an integer.
+ * @n: The integer to print.
  * Return: Nothing
  */
 void print_number(int n)
 {
-unsigned int x;
+if (n == 0)
+{
+_putchar('0');
+return;
+}
 
 if (n < 0)
 {
 _putchar('-');
-n *= -1;
+n = -n;
 }
 
-x = n;
+int reversed = 0;
+int temp = n;
 
-if (x / 10)
-print_number(x / 10);
+while (temp != 0)
+{
+reversed = reversed * 10 + temp % 10;
+temp /= 10;
+}
 
-_putchar(x % 10 + '0');
+while (reversed != 0)
+{
+_putchar(reversed % 10 + '0');
+reversed /= 10;
+}
 }
